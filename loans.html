@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Credit Loans | Fintra UK</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-animation">
+                        <svg class="logo-svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="logo-circle-1" cx="25" cy="25" r="20" stroke="url(#logo-gradient)" stroke-width="3"/>
+                            <circle class="logo-circle-2" cx="25" cy="25" r="15" stroke="url(#logo-gradient-2)" stroke-width="2"/>
+                            <path class="logo-path" d="M20 25L25 30L30 20" stroke="url(#logo-gradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="logo-gradient" x1="0" y1="0" x2="50" y2="50">
+                                    <stop offset="0%" stop-color="#6366F1"/>
+                                    <stop offset="100%" stop-color="#8B5CF6"/>
+                                </linearGradient>
+                                <linearGradient id="logo-gradient-2" x1="0" y1="0" x2="50" y2="50">
+                                    <stop offset="0%" stop-color="#10B981"/>
+                                    <stop offset="100%" stop-color="#059669"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Fintra UK</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="loans.html" class="active">Loans</a></li>
+                    <li><a href="debt-management.html">Debt Management</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop" alt="Bad Credit Loans" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-title">Bad Credit Loans</h1>
+                <p class="page-subtitle">Your credit score doesn't define you. Get the loan you need with competitive rates and flexible terms designed for bad credit applicants.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Calculator Section -->
+    <section class="loan-calculator">
+        <div class="container">
+            <div class="calculator-wrapper">
+                <div class="calculator-info">
+                    <h2>Calculate Your Loan</h2>
+                    <p>Adjust the sliders to see your estimated monthly payment. No obligation, no hidden fees.</p>
+                    
+                    <div class="loan-features">
+                        <div class="loan-feature">
+                            <div class="feature-check">✓</div>
+                            <div>
+                                <h4>Quick Approval</h4>
+                                <p>Decision in as little as 24 hours</p>
+                            </div>
+                        </div>
+                        <div class="loan-feature">
+                            <div class="feature-check">✓</div>
+                            <div>
+                                <h4>Flexible Terms</h4>
+                                <p>12 to 60 months repayment options</p>
+                            </div>
+                        </div>
+                        <div class="loan-feature">
+                            <div class="feature-check">✓</div>
+                            <div>
+                                <h4>No Hidden Fees</h4>
+                                <p>Transparent pricing, always</p>
+                            </div>
+                        </div>
+                        <div class="loan-feature">
+                            <div class="feature-check">✓</div>
+                            <div>
+                                <h4>Bad Credit OK</h4>
+                                <p>We specialize in poor credit applications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-panel">
+                    <div class="calculator-controls">
+                        <div class="calculator-input">
+                            <label for="loanAmount">Loan Amount</label>
+                            <div class="slider-value">£<span id="loanAmountValue">10000</span></div>
+                            <input type="range" id="loanAmount" min="1000" max="25000" value="10000" step="500">
+                            <div class="slider-labels">
+                                <span>£1,000</span>
+                                <span>£25,000</span>
+                            </div>
+                        </div>
+
+                        <div class="calculator-input">
+                            <label for="loanTerm">Loan Term (months)</label>
+                            <div class="slider-value"><span id="loanTermValue">36</span> months</div>
+                            <input type="range" id="loanTerm" min="12" max="60" value="36" step="6">
+                            <div class="slider-labels">
+                                <span>12 months</span>
+                                <span>60 months</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calculator-results">
+                        <div class="result-item">
+                            <span class="result-label">Estimated Monthly Payment</span>
+                            <span class="result-value" id="monthlyPayment">£347</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Total Repayable</span>
+                            <span class="result-value" id="totalRepayable">£12,492</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Representative APR</span>
+                            <span class="result-value">19.9%</span>
+                        </div>
+                    </div>
+
+                    <p class="calculator-disclaimer">
+                        *Representative example: Based on a typical APR for bad credit loans. Your actual rate may vary based on your circumstances.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section class="application-section">
+        <div class="container">
+            <div class="application-header">
+                <h2>Apply for Your Loan</h2>
+                <p>Complete the form below and we'll get back to you within 24 hours</p>
+            </div>
+
+            <div class="application-form-wrapper">
+                <form class="application-form" id="loanApplicationForm">
+                    <div class="form-progress">
+                        <div class="progress-step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <span>Personal Details</span>
+                        </div>
+                        <div class="progress-step" data-step="2">
+                            <div class="step-number">2</div>
+                            <span>Employment</span>
+                        </div>
+                        <div class="progress-step" data-step="3">
+                            <div class="step-number">3</div>
+                            <span>Financial Info</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Personal Details -->
+                    <div class="form-step active" data-step="1">
+                        <h3>Personal Details</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Date of Birth *</label>
+                                <input type="date" id="dob" name="dob" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="maritalStatus">Marital Status *</label>
+                                <select id="maritalStatus" name="maritalStatus" required>
+                                    <option value="">Select...</option>
+                                    <option value="single">Single</option>
+                                    <option value="married">Married</option>
+                                    <option value="divorced">Divorced</option>
+                                    <option value="widowed">Widowed</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="address">Full Address *</label>
+                                <input type="text" id="address" name="address" placeholder="Street Address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="postcode">Postcode *</label>
+                                <input type="text" id="postcode" name="postcode" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="timeAtAddress">Time at Address *</label>
+                                <select id="timeAtAddress" name="timeAtAddress" required>
+                                    <option value="">Select...</option>
+                                    <option value="0-6">0-6 months</option>
+                                    <option value="6-12">6-12 months</option>
+                                    <option value="1-3">1-3 years</option>
+                                    <option value="3+">3+ years</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="residentialStatus">Residential Status *</label>
+                                <select id="residentialStatus" name="residentialStatus" required>
+                                    <option value="">Select...</option>
+                                    <option value="homeowner">Home Owner</option>
+                                    <option value="tenant">Tenant</option>
+                                    <option value="living-with-parents">Living with Parents</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-next" onclick="nextStep(2)">
+                            Next Step
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Step 2: Employment Details -->
+                    <div class="form-step" data-step="2">
+                        <h3>Employment Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="employmentStatus">Employment Status *</label>
+                                <select id="employmentStatus" name="employmentStatus" required>
+                                    <option value="">Select...</option>
+                                    <option value="full-time">Full Time Employed</option>
+                                    <option value="part-time">Part Time Employed</option>
+                                    <option value="self-employed">Self Employed</option>
+                                    <option value="unemployed">Unemployed</option>
+                                    <option value="retired">Retired</option>
+                                    <option value="benefits">Receiving Benefits</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="employer">Employer Name</label>
+                                <input type="text" id="employer" name="employer">
+                            </div>
+                            <div class="form-group">
+                                <label for="occupation">Occupation</label>
+                                <input type="text" id="occupation" name="occupation">
+                            </div>
+                            <div class="form-group">
+                                <label for="timeEmployed">Time with Employer</label>
+                                <select id="timeEmployed" name="timeEmployed">
+                                    <option value="">Select...</option>
+                                    <option value="0-6">0-6 months</option>
+                                    <option value="6-12">6-12 months</option>
+                                    <option value="1-3">1-3 years</option>
+                                    <option value="3+">3+ years</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-secondary" onclick="prevStep(1)">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                Previous
+                            </button>
+                            <button type="button" class="btn btn-primary btn-next" onclick="nextStep(3)">
+                                Next Step
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Financial Information -->
+                    <div class="form-step" data-step="3">
+                        <h3>Financial Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="monthlyIncome">Monthly Income (£) *</label>
+                                <input type="number" id="monthlyIncome" name="monthlyIncome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="monthlyExpenses">Monthly Expenses (£) *</label>
+                                <input type="number" id="monthlyExpenses" name="monthlyExpenses" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="requestedAmount">Loan Amount Requested (£) *</label>
+                                <input type="number" id="requestedAmount" name="requestedAmount" min="1000" max="25000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="loanPurpose">Loan Purpose *</label>
+                                <select id="loanPurpose" name="loanPurpose" required>
+                                    <option value="">Select...</option>
+                                    <option value="debt-consolidation">Debt Consolidation</option>
+                                    <option value="home-improvement">Home Improvement</option>
+                                    <option value="car">Car Purchase</option>
+                                    <option value="emergency">Emergency Expenses</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="bankName">Bank Name *</label>
+                                <input type="text" id="bankName" name="bankName" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>
+                                    <input type="checkbox" name="creditCheck" required>
+                                    I consent to a credit check being performed *
+                                </label>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>
+                                    <input type="checkbox" name="terms" required>
+                                    I agree to the terms and conditions and privacy policy *
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-secondary" onclick="prevStep(2)">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                Previous
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                Submit Application
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16 10H4M16 10L12 6M16 10L12 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Fintra UK</h4>
+                    <p>Helping UK residents achieve financial freedom through responsible lending and debt management.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="loans.html">Loans</a></li>
+                        <li><a href="debt-management.html">Debt Management</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">FCA Information</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fintra UK. All rights reserved. Authorized and regulated by the FCA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

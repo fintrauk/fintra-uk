@@ -1,0 +1,58 @@
+[
+  {
+    "id": "mk60ducfp6v3y6fhix8",
+    "type": "click",
+    "timestamp": "2026-01-08T22:18:19.743Z",
+    "button": "Apply for Loan",
+    "page": "/",
+    "visitorId": "mk60dqr7i97j2sg149g"
+  },
+  {
+    "id": "mk60g5p9k5if2ax316a",
+    "type": "click",
+    "timestamp": "2026-01-08T22:20:07.773Z",
+    "button": "Next Step",
+    "page": "/loans.html",
+    "visitorId": "mk60dumzxb4lrtobvjs"
+  },
+  {
+    "id": "mk60gn5chzmpvsdl28a",
+    "type": "click",
+    "timestamp": "2026-01-08T22:20:30.384Z",
+    "button": "Next Step",
+    "page": "/loans.html",
+    "visitorId": "mk60dumzxb4lrtobvjs"
+  },
+  {
+    "id": "mk60hc4rq4o7ny2zo3",
+    "type": "click",
+    "timestamp": "2026-01-08T22:21:02.763Z",
+    "button": "Submit Application",
+    "page": "/loans.html",
+    "visitorId": "mk60dumzxb4lrtobvjs"
+  },
+  {
+    "id": "mk60o0h6yuuibzg5wpo",
+    "type": "click",
+    "timestamp": "2026-01-08T22:26:14.250Z",
+    "button": "Get Help Now",
+    "page": "/index.html",
+    "visitorId": "mk60mmv43yqdal11dby"
+  },
+  {
+    "id": "mk60pugxj4wbx3f7k48",
+    "type": "click",
+    "timestamp": "2026-01-08T22:27:39.777Z",
+    "button": "Contact",
+    "page": "/index.html",
+    "visitorId": "mk60om15yd4gi266pm"
+  },
+  {
+    "id": "mk60vxdmyaw1tv2bgor",
+    "type": "click",
+    "timestamp": "2026-01-08T22:32:23.482Z",
+    "button": "Loans",
+    "page": "/index.html",
+    "visitorId": "mk60rtnu97660yx2br"
+  }
+]
