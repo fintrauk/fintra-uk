@@ -242,6 +242,12 @@ async function pollTelegramUpdates() {
         }
     } catch (error) {
         if (error.code !== 'ECONNABORTED') {
+            // 409 means another instance is polling - wait longer before retry
+            if (error.response && error.response.status === 409) {
+                console.log('⚠️ Telegram polling conflict (409) - another instance may be running. Retrying in 10s...');
+                setTimeout(pollTelegramUpdates, 10000);
+                return;
+            }
             console.error('Telegram polling error:', error.message);
         }
     }
@@ -250,9 +256,22 @@ async function pollTelegramUpdates() {
     setTimeout(pollTelegramUpdates, 1000);
 }
 
-// Start Telegram polling
-pollTelegramUpdates();
-console.log('🤖 Telegram bot started - Users can /start to subscribe');
+// Delete any existing webhook and start polling
+async function initTelegramBot() {
+    try {
+        // Remove any existing webhook to enable polling
+        await axios.get(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/deleteWebhook`);
+        console.log('🤖 Telegram bot started - Users can /start to subscribe');
+        pollTelegramUpdates();
+    } catch (error) {
+        console.error('Failed to initialize Telegram bot:', error.message);
+        // Still try polling anyway
+        pollTelegramUpdates();
+    }
+}
+
+// Start Telegram bot
+initTelegramBot();
 
 // Format date/time for UK
 function formatUKDateTime(date) {
