@@ -23,8 +23,8 @@ const CONTACT_LEADS_FILE = path.join(DATA_DIR, 'contact_leads.json');
 const EVENTS_FILE = path.join(DATA_DIR, 'events.json');
 const SUBSCRIBERS_FILE = path.join(DATA_DIR, 'subscribers.json');
 
-// Telegram Bot Configuration
-const TELEGRAM_BOT_TOKEN = '7984391495:AAGenWfVsv_glo9TVLJUJlbq0HUVIvHEYPU';
+// Telegram Bot Configuration (use environment variable or fallback to hardcoded)
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '7984391495:AAGenWfVsv_glo9TVLJUJlbq0HUVIvHEYPU';
 
 // Store for tracking last update ID for polling
 let lastUpdateId = 0;
